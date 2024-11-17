@@ -60,6 +60,11 @@ def create_measurement(name):
     
     logger.info("Database created: %s", name)
 
+def execute(query,database,measurementName):
+    resultSet=client.query(query=query,database=database).get_points(measurement=measurementName)
+    data=list(resultSet)
+    return data
+    
 
 def delete_database(db_name):
     """Delete a database from InfluxDB."""
@@ -94,7 +99,8 @@ def get_list(database_name, measurement_name,query:str):
 if __name__=='__main__':
     connectConnection()
     # create_measurement('test5','tst_mes',field_value=5)
-    create_database('tst')
-    create_measurement('tst','tst_mes',field_value=5)
-    
+    # create_database('tst')
+    # create_measurement('tst','tst_mes',field_value=5)
+    data=execute(query='select value,time from ECG  order by time asc limit 1000',database='health',measurementName='ECG')
+    print(data)
 
