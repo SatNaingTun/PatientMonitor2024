@@ -10,19 +10,4 @@ class HealthConfig(AppConfig):
         # from .DataCollector import getCollectBySchedule
         rt=getCollectBySchedule(1)
 
-    # def ready(self):
-    # def ready(self):
-    #     try:
-    #         from health.controllers import ECG_Main
-    #     except Exception as e:
-    #         print(e)
 
-        
-
-
-
-    # def ready(self):
-    #     print('Writing to Influx DB')
-    #     ECG_Main.run()
-        # from .DataCollector import getCollectBySchedule
-        # rt=getCollectBySchedule(2)
