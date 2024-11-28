@@ -1,9 +1,7 @@
-import ECG_Sensor
-import InfluxDb
+from . import ECG_Sensor
+from . import InfluxDb
 
-
-if __name__ == "__main__":
-    # Initialize SPI Pins
+def run():
     ECG_Sensor.startConnection()
     InfluxDb.connectConnection()
 
@@ -17,3 +15,7 @@ if __name__ == "__main__":
             print("\n Exiting program.")
     finally:
         ECG_Sensor.endConnection()
+
+if __name__ == "__main__":
+    run()
+    

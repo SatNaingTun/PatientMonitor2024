@@ -1,12 +1,33 @@
 <!-- {% load static %} -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plotly/Django</title>
+    <title>Horizontal Cards</title>
+    <style>
+        /* Flex container styling */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap; /* Wraps cards if the screen is too small */
+            gap: 20px; /* Adds spacing between cards */
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        
+        /* Card styling */
+        .card {
+            max-width: 18rem;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
-   
+        .card-title {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,7 +38,7 @@
 
 
     <script>
-        setTimeout('location.reload()', 1000)
+        setTimeout('location.reload()', 500)
       </script>
     
 </body>

@@ -1,5 +1,45 @@
 {% extends 'health/base.html' %}
 
 {% block content %}
+
+
+
+<div class="container mb3"> 
+
 {{ chart|safe}}
+
+</div>
+
+<div class="card-container">
+    
+    <!-- SPO2 Card -->
+    <div class="card">
+        <h5 class="card-title">SPO2</h5>
+        <ul class="list-unstyled">
+            <li>Latest Value: {{spo2.value}}</li>
+            <li>Latest Time: {{spo2.time}}</li>
+        </ul>
+    </div>
+
+    <!-- Pulse Card -->
+    <div class="card">
+        <h5 class="card-title">Pulse</h5>
+        <ul class="list-unstyled">
+            <li>Latest Value: {{pulse.value}}</li>
+            <li>Latest Time: {{pulse.time}}</li>
+        </ul>
+    </div>
+
+     <!-- Object Temperature Card -->
+     <div class="card">
+        <h5 class="card-title">Temperature</h5>
+        <ul class="list-unstyled">
+            <li>Object Temperature: {{objTemperature.value}}</li>
+            <li>Ambient Temperature: {{ambientTemperature.value}}</li>
+            <li>Latest Time: {{objTemperature.time}}</li>
+        </ul>
+    </div>
+
+</div>
+
 {% endblock content %}

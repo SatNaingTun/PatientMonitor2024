@@ -62,6 +62,7 @@ def create_measurement(name):
 
 def execute(query,database,measurementName):
     resultSet=client.query(query=query,database=database).get_points(measurement=measurementName)
+    # resultSet['title']=mesurementName
     data=list(resultSet)
     return data
     

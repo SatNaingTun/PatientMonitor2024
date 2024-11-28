@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Cards</title>
+    <style>
+        /* Flex container styling */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap; /* Wraps cards if the screen is too small */
+            gap: 20px; /* Adds spacing between cards */
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        
+        /* Card styling */
+        .card {
+            max-width: 18rem;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Ambient Temperature Card -->
+        <div class="card">
+            <h5 class="card-title">Ambient Temperature</h5>
+            <ul class="list-unstyled">
+                <li>Latest Value: {{ambientTemperature.value}}</li>
+                <li>Latest Time: {{ambientTemperature.time}}</li>
+            </ul>
+        </div>
+
+        <!-- Object Temperature Card -->
+        <div class="card">
+            <h5 class="card-title">Object Temperature</h5>
+            <ul class="list-unstyled">
+                <li>Latest Value: {{objTemperature.value}}</li>
+                <li>Latest Time: {{objTemperature.time}}</li>
+            </ul>
+        </div>
+
+        <!-- SPO2 Card -->
+        <div class="card">
+            <h5 class="card-title">SPO2</h5>
+            <ul class="list-unstyled">
+                <li>Latest Value: {{spo2.value}}</li>
+                <li>Latest Time: {{spo2.time}}</li>
+            </ul>
+        </div>
+
+        <!-- Pulse Card -->
+        <div class="card">
+            <h5 class="card-title">Pulse</h5>
+            <ul class="list-unstyled">
+                <li>Latest Value: {{pulse.value}}</li>
+                <li>Latest Time: {{pulse.time}}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
